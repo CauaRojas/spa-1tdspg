@@ -1,19 +1,16 @@
-export default function Cabecalho(props) {
+import { Link } from 'react-router-dom'
+
+export default function Cabecalho() {
     return (
         <>
             <header className="cabecalho">
-                <h1>
-                    {props.children} - {props.nomeDoUsuario}
-                </h1>
+                <h1></h1>
                 <ul>
                     <li>
-                        <a href="#">Home</a>
+                        <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <a href="#">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="#">Mais</a>
+                        <Link to="/produtos">Produtos</Link>
                     </li>
                 </ul>
             </header>

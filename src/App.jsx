@@ -1,15 +1,12 @@
-import Cabecalho from './components/Cabecalho'
-import Rodape from './components/Rodape'
-import Conteudo from './components/Conteudo'
+import { Outlet } from 'react-router-dom'
+import Cabecalho from './components/Cabecalho.jsx'
+import Rodape from './components/Rodape.jsx'
 export default function App() {
-    let meuNome = 'Cauã'
     return (
         <>
-            <div className="container">
-                <Cabecalho nomeDoUsuario={meuNome}>Hello World!</Cabecalho>
-                <Conteudo />
-                <Rodape />
-            </div>
+            <Cabecalho />
+            <Outlet />
+            <Rodape />
         </>
     )
 }
