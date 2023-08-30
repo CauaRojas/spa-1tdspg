@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
+import './Produtos.css'
 
 export default function Produtos() {
     return (
         <>
             <div>
                 <h1>Produtos</h1>
-                <table>
+                <table className="tabela-produtos">
                     <thead>
                         <tr>
                             <th>ID</th>
