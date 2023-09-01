@@ -10,9 +10,27 @@ export default function EditarProdutos() {
     return (
         <>
             <div>
-                <h1>EDITAR-PRODUTOS</h1>
-                <p>Produto selecionado - {produto.nome}</p>
-                <p>Preço - {produto.preco}</p>
+                <h1>Editar Produtos</h1>
+                <form action="#" method="get">
+                    <legend>Editar Produto</legend>
+                    <div>
+                        <label htmlFor="nome">Nome:</label>
+                        <input
+                            type="text"
+                            name="nome"
+                            id="nome"
+                            defaultValue={produto.nome}
+                        />
+                        <label htmlFor="desc">Descrição</label>
+                        <input
+                            type="text"
+                            name="desc"
+                            id="desc"
+                            defaultValue={produto.desc}
+                        />
+                        <button type="submit">Editar</button>
+                    </div>
+                </form>
             </div>
         </>
     )
