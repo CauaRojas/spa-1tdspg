@@ -1,7 +1,10 @@
-.tabela-produtos{
+.tabela-produtos {
     border-collapse: collapse;
 }
-.tabela-produtos tr, td, th{
+.tabela-produtos tr,
+td,
+th {
     padding: 4px;
     border: 2px solid black;
+    text-align: center;
 }
