@@ -7,14 +7,16 @@ import Error from './routes/Error.jsx'
 import Home from './routes/Home.jsx'
 import Produtos from './routes/Produtos.jsx'
 import App from './App'
+import ExcluirProdutos from './components/ExcluirProdutos'
 const router = createBrowserRouter([
     {
         path: '/',
         element: <App />,
         children: [
-            { path: '/', element: <Home /> }, 
+            { path: '/', element: <Home /> },
             { path: '/produtos', element: <Produtos /> },
             { path: '/editar/produto/:id', element: <EditarProdutos /> },
+            { path: '/excluir/produto/:id', element: <ExcluirProdutos /> },
         ],
         errorElement: <Error />,
     },
