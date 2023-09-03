@@ -7,10 +7,10 @@ export default function ExcluirProdutos() {
     const produto = getProdutoById(id)
     return (
         <>
-            <div>
+            <main>
                 <h1>EXCLUIR-PRODUTOS</h1>
                 <p>Produto selecionado - {produto.nome}</p>
-            </div>
+            </main>
         </>
     )
 }

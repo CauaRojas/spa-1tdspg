@@ -9,7 +9,7 @@ export default function EditarProdutos() {
 
     return (
         <>
-            <div>
+            <main>
                 <h1>Editar Produtos</h1>
                 <form action="#" method="get">
                     <legend>Editar Produto</legend>
@@ -31,7 +31,7 @@ export default function EditarProdutos() {
                         <button type="submit">Editar</button>
                     </div>
                 </form>
-            </div>
+            </main>
         </>
     )
 }
