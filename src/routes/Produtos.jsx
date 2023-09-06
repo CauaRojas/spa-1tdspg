@@ -10,9 +10,20 @@ export default function Produtos() {
     return (
         <>
             <div>
-                <h1>PRODUTOS</h1>
+                <h1
+                    style={{
+                        textAlign: 'center',
+                    }}
+                >
+                    PRODUTOS
+                </h1>
 
-                <table className="tabela-produtos">
+                <table
+                    className="tabela-produtos"
+                    style={{
+                        margin: '0 auto',
+                    }}
+                >
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -25,13 +36,27 @@ export default function Produtos() {
                     </thead>
                     <tbody>
                         {listaProdutos.map((produto, index) => (
-                            <tr key={index}>
+                            <tr
+                                style={{
+                                    backgroundColor:
+                                        produto.id % 2 == 0 ? '#ccc' : '#fff',
+                                }}
+                                key={index}
+                            >
                                 <td>{produto.id}</td>
                                 <td>{produto.nome}</td>
                                 <td>{produto.desc}</td>
                                 <td>{produto.preco}</td>
                                 <td>
-                                    <img src={produto.img} alt={produto.desc} />
+                                    <img
+                                        style={{
+                                            width: '100px',
+                                            height: '66px',
+                                            objectFit: 'cover',
+                                        }}
+                                        src={produto.img}
+                                        alt={produto.desc}
+                                    />
                                 </td>
                                 <td>
                                     <Link to={`/editar/produto/${produto.id}`}>

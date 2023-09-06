@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { getProdutoById } from './ListaProdutos'
+import { getProdutoById } from '../components/ListaProdutos'
 
 export default function ExcluirProdutos() {
     document.title = 'Excluir Produtos'
