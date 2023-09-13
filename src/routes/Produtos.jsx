@@ -5,8 +5,14 @@ import {
     AiOutlineDelete as ExcluirIcon,
 } from 'react-icons/ai'
 import tableStyle from './Produtos.module.css'
+import { useEffect, useState } from 'react'
 
 export default function Produtos() {
+    document.title = 'Produtos'
+    const [counter, setCounter] = useState(0)
+    useEffect(() => {
+        console.log('useEffect')
+    })
     return (
         <>
             <div>
@@ -17,6 +23,11 @@ export default function Produtos() {
                 >
                     PRODUTOS
                 </h1>
+                <div>
+                    <button onClick={() => setCounter(counter + 1)}>
+                        Counter - {counter}
+                    </button>
+                </div>
 
                 <table className={tableStyle['tabela-produtos']}>
                     <thead>
