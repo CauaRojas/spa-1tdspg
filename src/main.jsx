@@ -7,7 +7,7 @@ import Error from './routes/Error.jsx'
 import Home from './routes/Home.jsx'
 import Produtos from './routes/Produtos.jsx'
 import App from './App'
-import ExcluirProdutos from './components/ExcluirProdutos'
+import ExcluirProdutos from './routes/ExcluirProdutos.jsx'
 const router = createBrowserRouter([
     {
         path: '/',
