@@ -4,7 +4,7 @@ import {
     AiOutlineEdit as EditarIcon,
     AiOutlineDelete as ExcluirIcon,
 } from 'react-icons/ai'
-import './Produtos.css'
+import tableStyle from './Produtos.module.css'
 
 export default function Produtos() {
     return (
@@ -18,20 +18,19 @@ export default function Produtos() {
                     PRODUTOS
                 </h1>
 
-                <table
-                    className="tabela-produtos"
-                    style={{
-                        margin: '0 auto',
-                    }}
-                >
+                <table className={tableStyle['tabela-produtos']}>
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>NOME</th>
-                            <th>DESCRIÇÃO</th>
-                            <th>PREÇO</th>
-                            <th>IMG</th>
-                            <th>EDITAR/EXCLUIR</th>
+                            <th className={tableStyle['tabela-cell']}>ID</th>
+                            <th className={tableStyle['tabela-cell']}>NOME</th>
+                            <th className={tableStyle['tabela-cell']}>
+                                DESCRIÇÃO
+                            </th>
+                            <th className={tableStyle['tabela-cell']}>PREÇO</th>
+                            <th className={tableStyle['tabela-cell']}>IMG</th>
+                            <th className={tableStyle['tabela-cell']}>
+                                EDITAR/EXCLUIR
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,23 +41,28 @@ export default function Produtos() {
                                         produto.id % 2 == 0 ? '#ccc' : '#fff',
                                 }}
                                 key={index}
+                                className={tableStyle['tabela-cell']}
                             >
-                                <td>{produto.id}</td>
-                                <td>{produto.nome}</td>
-                                <td>{produto.desc}</td>
-                                <td>{produto.preco}</td>
-                                <td>
+                                <td className={tableStyle['tabela-cell']}>
+                                    {produto.id}
+                                </td>
+                                <td className={tableStyle['tabela-cell']}>
+                                    {produto.nome}
+                                </td>
+                                <td className={tableStyle['tabela-cell']}>
+                                    {produto.desc}
+                                </td>
+                                <td className={tableStyle['tabela-cell']}>
+                                    {produto.preco}
+                                </td>
+                                <td className={tableStyle['tabela-cell']}>
                                     <img
-                                        style={{
-                                            width: '100px',
-                                            height: '66px',
-                                            objectFit: 'cover',
-                                        }}
+                                        className={tableStyle['img-produto']}
                                         src={produto.img}
                                         alt={produto.desc}
                                     />
                                 </td>
-                                <td>
+                                <td className={tableStyle['tabela-cell']}>
                                     <Link to={`/editar/produto/${produto.id}`}>
                                         <EditarIcon />
                                     </Link>

@@ -1,0 +1,19 @@
+.tabela-produtos {
+    border-collapse: collapse;
+    margin: 0 auto;
+    .img-produto {
+        width: 100px;
+        height: 66px;
+        object-fit: cover;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .tabela-cell {
+        padding: 4px;
+        border: 2px solid black;
+        text-align: center;
+    }
+}
