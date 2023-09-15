@@ -10,9 +10,14 @@ import { useEffect, useState } from 'react'
 export default function Produtos() {
     document.title = 'Produtos'
     const [counter, setCounter] = useState(0)
+    const [novaLista, setNovaLista] = useState([{}])
+    const [counter2, setCounter2] = useState(0)
     useEffect(() => {
-        console.log('useEffect')
-    })
+        setNovaLista(listaProdutos)
+    }, [])
+    useEffect(() => {
+        console.log('Counter 2: ', counter2)
+    }, [counter2])
     return (
         <>
             <div>
@@ -26,6 +31,9 @@ export default function Produtos() {
                 <div>
                     <button onClick={() => setCounter(counter + 1)}>
                         Counter - {counter}
+                    </button>
+                    <button onClick={() => setCounter2(counter2 + 1)}>
+                        Counter2 - {counter2}
                     </button>
                 </div>
 
@@ -44,13 +52,9 @@ export default function Produtos() {
                             </th>
                         </tr>
                     </thead>
-                    <tbody>
-                        {listaProdutos.map((produto, index) => (
+                    <tbody className={tableStyle['tabela-body']}>
+                        {novaLista.map((produto, index) => (
                             <tr
-                                style={{
-                                    backgroundColor:
-                                        produto.id % 2 == 0 ? '#ccc' : '#fff',
-                                }}
                                 key={index}
                                 className={tableStyle['tabela-cell']}
                             >

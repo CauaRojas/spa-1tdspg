@@ -10,6 +10,21 @@
             transform: scale(1.05);
         }
     }
+    & thead {
+        background-color: #c74747;
+        color: white;
+    }
+    .tabela-body {
+        & tr {
+            transition: all 0.2s ease-in-out;
+            &:nth-child(even) {
+                background-color: #bdbdbd;
+            }
+            &:hover {
+                background-color: #c74747;
+            }
+        }
+    }
 
     .tabela-cell {
         padding: 4px;
