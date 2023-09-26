@@ -24,6 +24,9 @@ export default function Produtos() {
                 >
                     PRODUTOS
                 </h1>
+                <div className={tableStyle['add-produtos']}>
+                    <Link to="/add/produto">Adicionar Produto</Link>
+                </div>
                 <table className={tableStyle['tabela-produtos']}>
                     <thead>
                         <tr>
