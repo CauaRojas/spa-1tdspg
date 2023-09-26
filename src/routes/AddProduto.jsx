@@ -1,8 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { listaProdutos } from '../components/ListaProdutos'
 import styles from './AddProduto.module.css'
-import { useRef } from 'react'
-import { useEffect } from 'react'
+
 
 export default function AddProduto() {
     const navigate = useNavigate()
